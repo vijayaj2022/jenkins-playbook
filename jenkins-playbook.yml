@@ -34,5 +34,5 @@
   - name: start jenkins service
     apt:
       name: jenkins
-      state: started
+      state: restarted
       enable: yes
