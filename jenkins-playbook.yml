@@ -1,6 +1,6 @@
 ---
 - name: install jenkins
-  host: localhost
+  hosts: localhost
   become: yes
   become_user: root
   tasks:
