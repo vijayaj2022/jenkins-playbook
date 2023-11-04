@@ -5,9 +5,9 @@
   become_user: root
   tasks:
   - name: Update all packages to their latest version
-       apt:
-         name: "*"
-         state: latest
+    apt:
+      name: "*"
+      state: latest
   - name: Download jenkins key
     get_url:
       name: download jenkins key
@@ -20,9 +20,9 @@
       filename: jenkins.list 
   
   - name: Update all packages to their latest version
-      apt:
-        name: "*"
-        state: latest
+    apt:
+      name: "*"
+      state: latest
   - name: install fontconfig to install java
     shell: apt install fontconfig -y
   - name: install java
@@ -32,7 +32,7 @@
       name: jenkins
       state: present
   - name: start jenkins service
-      apt:
-        name: jenkins
-        state: started
-        enable: yes
+    apt:
+      name: jenkins
+      state: started
+      enable: yes
